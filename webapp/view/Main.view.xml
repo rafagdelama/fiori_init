@@ -1,12 +1,22 @@
 <mvc:View controllerName="invoice.controller.Main"
-    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
-    xmlns="sap.m">
+    xmlns:mvc="sap.ui.core.mvc" 
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
     <Page id="page" title="{i18n>title}">
         <content >
             <Panel id="_IDGenPanel" headerText="{i18n>selectionScreen}">
                 <Label id="_IDLabelShipName" labelFor="_IDShipName" text="{i18n>shipName}" class="sapUiSmallMargin" />
                 <Input id="_IDShipName" width="200px" class="sapUiSmallMarginEnd" > </Input>
                 <Label id="_IDLabelCountry"  labelFor="_IDGCountry" text="{i18n>countryName}" class="sapUiSmallMargin" />
+                <Select id="slCoutry" selectedKey="{selectionScreen>/CountryKey}" 
+                                        forceSelection="false" 
+                                        items="{selectionScreen>/Countries}"> 
+                        <items>
+                            <core:Item id="_IDGenItem" key="{selectionScreen>key}" text="{selectionScreen>text}" /> 
+                        </items>
+                
+                </Select>
             </Panel>
         </content>
     </Page>

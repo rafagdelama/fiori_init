@@ -1,27 +1,14 @@
 {
-    "shipname": "",
-    "country_key": "",
-    "countries": [
-      {
-        "key": "Germany",
-        "text": "Germany"
-      },
-      {
-        "key": "UK",
-        "text": "UK"
-      },
-      {
-        "key": "Mexico",
-        "text": "Mexico"
-      },
-      {
-        "key": "Sweden",
-        "text": "Sweden"
-      },
-      {
-        "key": "Brazil",
-        "text": "Brazil"
-      }
+    "Shipname": "",
+    "CountryKey": "",
+    "Countries": [
+      { "key": "", "text": "" },
+      { "key": "Germany", "text": "Germany" },
+      { "key": "UK", "text": "UK" },
+      { "key": "Mexico", "text": "Mexico" },
+      { "key": "Sweden", "text": "Sweden" },
+      { "key": "Brazil", "text": "Brazil" }
+    
     ],
     "Currency":"USD"
   }

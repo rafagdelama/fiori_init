@@ -15,7 +15,7 @@ function (Controller, JSONModel) {
             const oView = this.getView();
 
             // Carga el archivo JSON
-            oJSONModel.loadData("./model/selectionScreenMenu.json");
+            oJSONModel.loadData("/model/selectionScreenMenu.json");
 
             // Asigna el modelo a la vista
             oView.setModel(oJSONModel, "selectionScreen");
