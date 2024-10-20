@@ -7,7 +7,7 @@
         <content >
             <Panel id="_IDGenPanel" headerText="{i18n>selectionScreen}">
                 <Label id="_IDLabelShipName" labelFor="_IDShipName" text="{i18n>shipName}" class="sapUiSmallMargin" />
-                <Input id="_IDShipName" width="200px" class="sapUiSmallMarginEnd" > </Input>
+                <Input id="_IDShipName" value="{selectionScreen>/ShipName}" width="200px" class="sapUiSmallMarginEnd" > </Input>
                 <Label id="_IDLabelCountry"  labelFor="_IDGCountry" text="{i18n>countryName}" class="sapUiSmallMargin" />
                 <Select id="slCoutry" selectedKey="{selectionScreen>/CountryKey}" 
                                         forceSelection="false" 
@@ -17,7 +17,15 @@
                         </items>
                 
                 </Select>
-            </Panel>
+                <Button id="btnFilter"  text="{i18n>btnFilter}" 
+                                        icon="sap-icon://filter" 
+                                        press="onFilter" 
+                                        class="sapUiSmallMarginEnd"/>
+                <Button id="btnClearFilter"  text="{i18n>btnClearFilter}" 
+                                icon="sap-icon://clear-filter" 
+                                press="onClearFilter" 
+                                class="sapUiSmallMarginEnd"/>
+    </Panel>
         </content>
     </Page>
 </mvc:View>

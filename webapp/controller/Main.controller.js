@@ -7,19 +7,23 @@ function (Controller, JSONModel) {
 
     return Controller.extend("invoice.controller.Main", {
         onInit: function () {
-
             // Corrección: Es 'JSONModel' y no 'oJSONModel'
             const oJSONModel = new JSONModel();
-
             // Obtiene la vista
             const oView = this.getView();
-
             // Carga el archivo JSON
             oJSONModel.loadData("/model/selectionScreenMenu.json");
-
             // Asigna el modelo a la vista
             oView.setModel(oJSONModel, "selectionScreen");
 
+        },
+        onFilter: function(onEvent)  {
+            
+        } ,
+        onClearFilter: function(){
+            const oModelSS =this.getView().getModel("selectionScreen");
+            oModelSS.setProperty("/CountryKey", "");
+            oModelSS.setProperty("/ShipName", "");
         }
     });
 });
