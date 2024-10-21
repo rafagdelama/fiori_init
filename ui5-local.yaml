@@ -29,3 +29,6 @@ server:
       afterMiddleware: compression
       configuration:
         ignoreCertError: false # If set to true, certificate errors will be ignored. E.g. self-signed certificates will be accepted
+        backend:
+          - path: /V2  # El path para el backend, por ejemplo, el servicio OData
+            url: http://northwind.dest  # La URL completa de tu servicio backend

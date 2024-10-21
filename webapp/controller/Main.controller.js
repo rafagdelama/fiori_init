@@ -16,6 +16,11 @@ function (Controller, JSONModel) {
             // Asigna el modelo a la vista
             oView.setModel(oJSONModel, "selectionScreen");
 
+             // 2. Manejo del fallo en la carga de metadatos (OData)
+            //const oModel = this.getOwnerComponent().getModel();
+            //oModel.attachMetadataFailed(function(oEvent) {
+                //console.error("Metadata loading failed", oEvent.getParameters());
+
         },
         onFilter: function(onEvent)  {
             
